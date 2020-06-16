@@ -21,7 +21,11 @@ nixpkgs: prev:
       qemu
       nodejs
       cachix
-      stylish-haskell;
+      stylish-haskell
+      vlc
+      youtube-dl
+      magit
+      ;
 
     ghc = nixpkgs.haskell.compiler.ghc883;
 
