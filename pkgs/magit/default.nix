@@ -13,7 +13,7 @@ let
       exit 1
     fi
 
-    ${emacs-magit}/bin/emacs -nw -Q -l ${placeholder "out"}/init.el
+    ${emacs-magit}/bin/emacs -nw -Q -l @out@/init.el
   '';
 
   initel = ''
@@ -41,7 +41,7 @@ runCommand "magit" {
   passAsFile = [ "script" "initel" ];
 } ''
   mkdir -p $out/bin
-  cp $scriptPath $out/bin/magit
+  substitute $scriptPath $out/bin/magit --subst-var out
   chmod +x $out/bin/magit
   cp $initelPath $out/init.el
 ''
