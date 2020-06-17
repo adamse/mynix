@@ -25,6 +25,7 @@ nixpkgs: prev:
       vlc
       youtube-dl
       magit
+      nixify
       ;
 
     ghc = nixpkgs.haskell.compiler.ghc883;
