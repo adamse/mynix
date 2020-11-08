@@ -5,32 +5,38 @@ pkgs: prev:
     inherit (pkgs)
       # firefox
       # google-chrome
-      # chromium
-      git
-      vim
-      neovim
+      bash-bd
       cabal-install
+      cachix
+      ctags
       direnv
+      fzf
+      git
+      hadrian
+      hledger
+      hledger-web
+      magit
+      neovim
+      niv
+      nix
+      nixify
+      nodejs
+      qemu
       ripgrep
       shellcheck
-      ctags
-      tree
-      wget
-      nix
       smartmontools
-      qemu
-      nodejs
-      cachix
       stylish-haskell
+      tree
+      vim
       vlc
+      wget
+      xsel
       youtube-dl
-      magit
-      nixify
-      niv
-      bash-bd
       ;
 
-    ghc = pkgs.haskell.compiler.ghc883;
+    # chromium = (pkgs.chromium.override { enableVaapi = true; });
+
+    ghc = pkgs.haskell.compiler.ghc884;
 
     fast-tags = pkgs.haskellPackages.fast-tags;
 
