@@ -10,6 +10,7 @@ pkgs: prev:
       cachix
       ctags
       direnv
+      fd
       fzf
       git
       hadrian
@@ -21,6 +22,7 @@ pkgs: prev:
       nix
       nixify
       nodejs
+      pahole
       qemu
       ripgrep
       shellcheck
