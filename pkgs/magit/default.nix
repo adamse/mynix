@@ -13,7 +13,8 @@ let
       exit 1
     fi
 
-    ${emacs-magit}/bin/emacs -nw -Q -l @out@/init.el
+    export TERM=xterm-256color
+    ${emacs-magit}/bin/emacs --no-window-system --quick --load @out@/init.el
   '';
 
   initel = ''
