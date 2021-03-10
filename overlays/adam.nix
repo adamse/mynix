@@ -38,7 +38,7 @@ pkgs: prev:
 
     # chromium = (pkgs.chromium.override { enableVaapi = true; });
 
-    ghc = pkgs.haskell.compiler.ghc884;
+    ghc = pkgs.haskell.compiler.ghc8104;
 
     fast-tags = pkgs.haskellPackages.fast-tags;
 
