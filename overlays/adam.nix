@@ -17,7 +17,7 @@ pkgs: prev:
       hledger
       hledger-web
       magit
-      neovim
+      neovim-nightly
       niv
       nix
       nixify
@@ -34,6 +34,7 @@ pkgs: prev:
       wget
       xsel
       youtube-dl
+      jq
       ;
 
     # chromium = (pkgs.chromium.override { enableVaapi = true; });
