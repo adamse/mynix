@@ -41,7 +41,14 @@ pkgs: prev:
 
     ghc = pkgs.haskell.compiler.ghc8107;
 
-    fast-tags = pkgs.haskellPackages.fast-tags;
+    fast-tags = pkgs.haskellPackages.fast-tags.overrideAttrs (old: {
+      doCheck = false;
+      doHaddock = false;
+      enableExecutableProfiling = false;
+      enableLibraryProfiling = false;
+      enableSharedExecutables = false;
+      enableSharedLibraries = false;
+    });
 
     tiddlywiki = pkgs.nodePackages.tiddlywiki;
 
