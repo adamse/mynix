@@ -1,6 +1,6 @@
 { direnv, stdenv, runCommand, writeScriptBin }:
 
-let 
+let
   defaultShellNix = ''
     { pkgs ? import <nixpkgs> {} }:
 
@@ -13,6 +13,7 @@ let
 
     if [ ! -f ./shell.nix -a ! -f ./default.nix ]; then
       cp @out@/shell.nix ./shell.nix
+      chmod u+w ./shell.nix
     fi
 
     echo "use_nix" > .envrc

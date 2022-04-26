@@ -39,9 +39,11 @@ pkgs: prev:
 
     # chromium = (pkgs.chromium.override { enableVaapi = true; });
 
-    ghc = pkgs.haskell.compiler.ghc8104;
+    ghc = pkgs.haskell.compiler.ghc8107;
 
     fast-tags = pkgs.haskellPackages.fast-tags;
+
+    tiddlywiki = pkgs.nodePackages.tiddlywiki;
 
     nix-rebuild = prev.writeScriptBin "nix-rebuild" ''
       #!${prev.stdenv.shell}

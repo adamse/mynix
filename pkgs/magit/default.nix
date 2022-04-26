@@ -1,7 +1,7 @@
-{ stdenv, emacsPackagesGen, emacs, git, runCommand }:
+{ stdenv, emacsPackagesFor, emacs, git, runCommand }:
 
 let
-  emacsWithPackages = (emacsPackagesGen emacs).emacsWithPackages;
+  emacsWithPackages = (emacsPackagesFor emacs).emacsWithPackages;
   emacs-magit = emacsWithPackages (epkgs: (with epkgs.melpaStablePackages; [
     magit
   ]));
